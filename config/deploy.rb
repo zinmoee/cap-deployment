@@ -4,9 +4,11 @@ lock "~> 3.17.1"
 set :application, "cap-deployment"
 set :repo_url, "git@github.com:zinmoee/cap-deployment.git"
 
-set :deploy_to, "/home/ubuntu/cap-development"
+set :deploy_to, "root/app"
 
 set :use_sudo, true
+
+set :user, 'root'
 
 set :branch, 'main'
 
