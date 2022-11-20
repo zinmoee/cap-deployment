@@ -1,14 +1,14 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.1"
 
-set :application, "cap-deployment"
+set :application, "app"
 set :repo_url, "git@github.com:zinmoee/cap-deployment.git"
 
-set :deploy_to, "root/app"
+set :deploy_to, "/home/ubuntu/app"
 
 set :use_sudo, true
 
-set :user, 'root'
+set :user, 'ubuntu'
 
 set :branch, 'main'
 
