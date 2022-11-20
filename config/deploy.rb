@@ -2,7 +2,7 @@
 lock "~> 3.17.1"
 
 set :application, "cap-deployment"
-set :repo_url, "https://github.com/zinmoee/cap-deployment.git"
+set :repo_url, "git@github.com:zinmoee/cap-deployment.git"
 
 set :deploy_to, "/home/ubuntu/cap-development"
 
@@ -10,14 +10,14 @@ set :use_sudo, true
 
 set :branch, 'main'
 
-set :linked_files, %w{config/master.key config/database.yml}
+# set :linked_files, %w{config/master.key}
 
 set :rails_env, 'production'
 
 set :keep_releases, 2
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-set :linked_files, %w{config/database.yml config/master.key}
+# set :linked_files, %w{config/master.key}
 
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 
